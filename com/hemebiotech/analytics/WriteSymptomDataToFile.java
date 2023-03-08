@@ -22,14 +22,14 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
   @Override
   public void writeSymptoms(Map<String, Integer> symptoms) {
     
-    fileName = "results.out.txt";
+    fileName = "result.out";
 
     try {
       FileWriter writer = new FileWriter(fileName);
       BufferedWriter bw = new BufferedWriter(writer);
 
       for (Map.Entry<String, Integer> mapEntry : symptoms.entrySet()) {
-        bw.write(mapEntry.getKey() + "=" + mapEntry.getValue());
+        bw.write(mapEntry.getKey() + " : " + mapEntry.getValue());
         bw.newLine();
 
       }
