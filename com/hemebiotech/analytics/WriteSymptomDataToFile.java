@@ -10,15 +10,11 @@ import java.util.Map;
 public class WriteSymptomDataToFile implements ISymptomWriter {
   private String fileName;
 
-  public String getFileName() {
-		return fileName;
-	}
-
-
-	public void setFileName(String fileName) {
-		this.fileName = fileName;
-	}	
-
+  /**
+  * Write a map in a file named result.out.
+  * One item by line with this format "key:value".
+  *
+  */
   @Override
   public void writeSymptoms(Map<String, Integer> symptoms) {
     

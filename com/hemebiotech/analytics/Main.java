@@ -7,23 +7,27 @@ import java.util.TreeMap;
 
 // WRITE YOUR CODE HERE
 public class Main {
-  	public static void main(String[] args) {
+  /**
+  * Read source file, extract and process data.
+  * Generate the intended result file.
+  *
+  */
+  public static void main(String[] args) {
 
-      ISymptomReader myReader = new ReadSymptomDataFromFile("symptoms.txt");
-      ISymptomWriter myWriter = new WriteSymptomDataToFile();
-      AnalyticsCounter analyticsCounter = new AnalyticsCounter(myReader, myWriter);
+    ISymptomReader myReader = new ReadSymptomDataFromFile("symptoms.txt");
+    ISymptomWriter myWriter = new WriteSymptomDataToFile();
+    AnalyticsCounter analyticsCounter = new AnalyticsCounter(myReader, myWriter);
 
-      List<String> listOfSymptoms;
+    List<String> listOfSymptoms;
 
-      listOfSymptoms = analyticsCounter.getSymptoms();
+    listOfSymptoms = analyticsCounter.getSymptoms();
 
-      Map<String, Integer> counting = analyticsCounter.countSymptoms(listOfSymptoms);
+    Map<String, Integer> counting = analyticsCounter.countSymptoms(listOfSymptoms);
 
-      SortedMap<String, Integer> ordering = analyticsCounter.sortSymptoms(counting);
+    SortedMap<String, Integer> ordering = analyticsCounter.sortSymptoms(counting);
 
-      analyticsCounter.writeSymptoms(ordering);
-    
+    analyticsCounter.writeSymptoms(ordering);
+  
 
-
-    }
+  }
 }
