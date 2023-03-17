@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.util.Iterator;
 import java.util.Map;
 
-// WRITE YOUR CODE HERE
 public class WriteSymptomDataToFile implements ISymptomWriter {
   private String fileName;
 
@@ -14,6 +13,7 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
   * Write a map in a file named result.out.
   * One item by line with this format "key:value".
   *
+  *@param symptoms Map with ordered symptoms and their occurences
   */
   @Override
   public void writeSymptoms(Map<String, Integer> symptoms) {

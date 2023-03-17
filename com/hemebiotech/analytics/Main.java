@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
-// WRITE YOUR CODE HERE
+
 public class Main {
   /**
   * Read source file, extract and process data.
@@ -28,6 +28,5 @@ public class Main {
 
     analyticsCounter.writeSymptoms(ordering);
   
-
   }
 }

@@ -10,7 +10,7 @@ import java.util.SortedMap;
 import java.util.TreeMap;
 
 /**
- * Contains the processing applied to the data.
+ * count symptoms and alphabetically order the list from extracted data 
  * 
  * @version 1.0
  *
